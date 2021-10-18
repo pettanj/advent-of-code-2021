@@ -1,0 +1,17 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "My advent of code attempt 2021",
+  "main": "index.js",
+  "repository": "https://github.com/pettanj/advent-of-code-2021.git",
+  "author": "Petrus Briland <petrus.jonsson@gmail.com>",
+  "license": "Apache 2.0",
+  "scripts": {
+    "dev": "concurrently \"cd backend && yarn dev\" \"cd .\\frontend && yarn serve\"",
+    "start": "concurrently \"cd backend && yarn start\" \"cd frontend &&yarn build && cd .. && http-server frontend/public\""
+  },
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "http-server": "^13.0.2"
+  }
+}
