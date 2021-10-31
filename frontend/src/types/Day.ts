@@ -1,4 +1,4 @@
 export default interface Day {
-  date: Date;
   id: number;
+  date: Date;
 }

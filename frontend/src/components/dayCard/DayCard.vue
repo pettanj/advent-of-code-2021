@@ -6,6 +6,7 @@
     <p v-if="result != null">
       {{result.value}}&nbsp;{{result.time}}ms
     </p>
+    <router-link :to="'/detail/' + day.id" class="btn btn-blue block">GotoDetail</router-link>
   </div>
 </template>
 <script lang="ts">
