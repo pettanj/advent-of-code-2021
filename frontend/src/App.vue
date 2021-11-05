@@ -1,6 +1,8 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link>
+  <div id="nav" class="p-4 bg-green-700 text-gray-200 flex flex-row items-center justify-center">
+    <router-link to="/" class="text-5xl font-bold">
+    Home
+    </router-link>
   </div>
   <router-view />
 </template>

@@ -12,7 +12,8 @@ app.use(cors());
 app.use('/', express.static('public'));
 
 app.get('/days', auth, days.list);
-app.get('/day/:id', auth, days.calculateAndGet)
+app.post('/day/:id/calculate', auth, days.calculateAndGet)
+app.get('/day/:id', auth, days.get)
 
 app.post('/testpost', auth, async (req, res) => {
   console.log(req.body)

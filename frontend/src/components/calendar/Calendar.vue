@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <h2>Calendar</h2>
-    <div class="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-gap-4">
-      <p>{{ this.loading ? "Loading ..." : "" }}</p>
+  <div class="mt-2 p-4">
+    <p>{{ this.loading ? "Loading ..." : "" }}</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-gap-4 gap-1 lg:gap-2 xl:gap-3">
       <div v-for="day of days" :key="day.id">
         <day-card :day="day"></day-card>
       </div>

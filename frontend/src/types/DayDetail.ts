@@ -1,7 +1,11 @@
+interface Part {
+  value: string;
+  duration: number; // ms
+}
 export default interface DayDetail {
   id: number;
   date: Date;
-  answer: string;
+  part1: Part;
+  part2: Part;
   puzzle: string;
-  duration: number; // ms
 }
