@@ -8,3 +8,6 @@
 .btn-blue {
   @apply bg-blue-400 text-white hover:bg-blue-300;
 }
+.btn-tertiary {
+  @apply text-blue-600 hover:bg-blue-100 hover:bg-opacity-50;
+}

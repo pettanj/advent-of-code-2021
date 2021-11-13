@@ -1,7 +1,7 @@
 <template>
   <div id="nav" class="p-4 bg-green-700 text-gray-200 flex flex-row items-center justify-center">
-    <router-link to="/" class="text-5xl font-bold">
-    Home
+    <router-link to="/" class="text-4xl font-bold">
+      * * Advent of Code 2021 * *<br />
     </router-link>
   </div>
   <router-view />
