@@ -8,10 +8,12 @@
   "license": "Apache 2.0",
   "scripts": {
     "dev": "concurrently \"cd backend && yarn dev\" \"cd .\\frontend && yarn serve\"",
-    "start": "concurrently \"cd backend && yarn start\" \"cd frontend &&yarn build && cd .. && http-server frontend/public\""
+    "start": "concurrently \"cd backend && yarn start\" \"cd frontend &&yarn build && cd .. && http-server frontend/public\"",
+    "postinstall": "concurrently \" cd backend && yarn\" \"cd frontend && yarn\""
   },
   "dependencies": {
     "concurrently": "^6.3.0",
-    "http-server": "^13.0.2"
+    "http-server": "^13.0.2",
+    "yarn": "^1.22.17"
   }
 }

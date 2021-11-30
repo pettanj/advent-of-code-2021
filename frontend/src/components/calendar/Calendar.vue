@@ -31,6 +31,6 @@ export default defineComponent({
     CalendarService.getDays().then(days => {
       this.days = days;
     })
-  },
+  }
 });
 </script>

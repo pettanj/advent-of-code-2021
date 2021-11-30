@@ -1,3 +1,4 @@
+const {splitLines} = require('./utils');
 // Return value should be in form
 // {part1, part2, duration}
 
@@ -19,7 +20,7 @@ function p2(puzzle) {
 }
 
 function parseInput(input) {
-  return input.split('\n');
+  return splitLines(input);
 }
 
 module.exports = {solve}

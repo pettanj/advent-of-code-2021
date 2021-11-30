@@ -55,7 +55,7 @@
             <p v-if="!customPuzzle" class="text-xl text-blue-400 absolute left-50 top-50">* Drop input here *</p>
             <input type="file"
               v-on:change="uploadPuzzle($event)"
-              class="p-5 opacity-0 flex-grow"
+              class="p-5 h-full opacity-0 flex-grow"
               accept=".txt"
               droppable />
           </div>

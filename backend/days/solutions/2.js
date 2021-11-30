@@ -1,3 +1,5 @@
+const {splitLines} = require('./utils');
+
 // Return value should be in form
 // {part1, part2, duration}
 
