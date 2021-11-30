@@ -40,6 +40,17 @@ class CalendarService {
       });
     })
   }
+
+  randomSort(list: Day[] | undefined) {
+    if (list != null) {
+      return list
+      .map((value) => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value)
+    } else {
+      return [];
+    }
+  }
 }
 
 export default new CalendarService();
