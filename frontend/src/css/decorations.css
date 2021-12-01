@@ -27,6 +27,19 @@
   border: 1px solid black;
   border-collapse: collapse;
   background-color: theme('colors.blue.600');
+
+  position: relative;
+}
+
+.present-top::after {
+  z-index: 4;
+  content: '*';
+  font-size: 2rem;
+  left: 35%;
+  top: -1.1rem;
+  position: absolute;
+  color: theme('colors.yellow.300');
+
 }
 
 .sticker {
@@ -41,30 +54,6 @@
   background-color: theme('colors.yellow.100');
 }
 
-.present > .ribbon-row {
-  padding: 2px;
-  top: 0;
-  bottom: 0;
-  right: 50%;
-  background-color: theme('colors.red.600');
-  border: 1px solid black;
-  border-collapse: collapse;
-  position: absolute;
-}
-
-
-.present > .ribbon-col {
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 2px;
-  left: 0;
-  right: 0;
-  top: 50%;
-  background-color: theme('colors.red.600');
-  position: absolute;
-
-}
-
 /* Color variations */
 .present-green > .present-bottom {
   background-color: theme('colors.green.700');
@@ -72,11 +61,17 @@
 .present-green > .present-top {
   background-color: theme('colors.green.600');
 }
+.present-green > .present-top::after {
+  color: theme('colors.red.300');
+}
 .present-red > .present-bottom {
   background-color: theme('colors.red.700');
 }
 .present-red > .present-top {
   background-color: theme('colors.red.600');
+}
+.present-red > .present-top::after {
+  color: theme('colors.green.300');
 }
 .present-yellow > .present-bottom {
   background-color: theme('colors.yellow.700');
@@ -84,11 +79,17 @@
 .present-yellow > .present-top {
   background-color: theme('colors.yellow.600');
 }
+.present-yellow > .present-top::after {
+  color: theme('colors.blue.300');
+}
 .present-purple > .present-bottom {
   background-color: theme('colors.purple.700');
 }
 .present-purple > .present-top {
   background-color: theme('colors.purple.600');
+}
+.present-purple > .present-top::after {
+  color: theme('colors.yellow.300');
 }
 /* Size variations*/
 
