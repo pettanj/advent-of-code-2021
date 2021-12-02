@@ -10,7 +10,6 @@ function solve (input) {
 
 function p1(puzzle) {
   const start = new Date();
-  const duration = new Date() - start;
   let increases = 0;
   let previousDepth = puzzle.shift();
   puzzle.forEach(depth => {
@@ -19,12 +18,12 @@ function p1(puzzle) {
     }
     previousDepth = depth;
   });
+  const duration = new Date() - start;
   return {value: increases, duration};
 }
 
 function p2(puzzle) {
   const start = new Date();
-  const duration = new Date() - start;
   let sums = [];
   while(puzzle.length >= 3) {
     sums.push(getGroup(puzzle));
@@ -38,6 +37,7 @@ function p2(puzzle) {
     }
     previousSum = sum;
   })
+  const duration = new Date() - start;
   return {value: increases, duration};
 }
 
