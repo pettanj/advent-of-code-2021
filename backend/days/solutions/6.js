@@ -10,7 +10,7 @@ function solve (input) {
 
 function p1(puzzle) {
   const start = new Date();
-  let state = Object.assign(puzzle);
+  let state = [...puzzle];
   for (let i = 0; i < 80; i++) {
     state = executeDay(state);
   } 
@@ -32,10 +32,32 @@ function executeDay(state) {
   return state;
 }
 
+function executeDay2(state) {
+  let newState = {};
+  for (let i = 1; i <= 8; i++) {
+    newState[i-1] = state[i];
+  }
+  newState[8] = state[0];
+  newState[6] = newState[6] + state[0];
+  return newState;
+}
+
 function p2(puzzle) {
+  console.log(puzzle)
   const start = new Date();
+  let state = {};
+  for (let i = 0; i <= 8; i++) {
+    state[i] = 0;
+  }
+  for (let item of puzzle) {
+    state[item] ++;
+  }
+  for (let i = 0; i < 256; i++) {
+    state = executeDay2(state);
+  }
+  let answer = Object.values(state).reduce((prev, curr) => prev + curr);
   const duration = new Date() - start;
-  return {value: puzzle.length, duration};
+  return {value: answer, duration};
 }
 
 function parseInput(input) {
