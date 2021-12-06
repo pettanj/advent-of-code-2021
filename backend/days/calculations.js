@@ -3,6 +3,7 @@ const p2 = require('./solutions/2');
 const p3 = require('./solutions/3');
 const p4 = require('./solutions/4');
 const p5 = require('./solutions/5');
+const p6 = require('./solutions/6');
 
 function solve (day, puzzle) {
   switch (parseInt(day, 10)) {
@@ -16,6 +17,8 @@ function solve (day, puzzle) {
       return {...p4.solve(puzzle), ...{puzzle}};
     case 5:
       return {...p5.solve(puzzle), ...{puzzle}};
+    case 6:
+      return {...p6.solve(puzzle), ...{puzzle}};
     default:
       return null;
   }
