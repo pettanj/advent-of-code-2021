@@ -4,8 +4,7 @@ const {splitLines} = require('./utils');
 // {part1, part2, duration}
 
 function solve (input) {
-  let puzzle = parseInput(input);
-  return {part1: p1(puzzle), part2: p2(puzzle)};
+  return {part1: p1(parseInput(input)), part2: p2(parseInput(input))};
 }
 
 function p1(puzzle) {
