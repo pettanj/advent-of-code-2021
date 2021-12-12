@@ -97,8 +97,6 @@ function p2(puzzle) {
   let i = 0;
   while(!board.flatMap(x => x).every(x => x === 0)) {
     [board, flashes] = tick(board, flashes);
-    console.log('------')
-    board.forEach(x => x.join(''))
     i++;
   }
   const duration = new Date() - start;
